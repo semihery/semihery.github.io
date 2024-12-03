@@ -1,0 +1,100 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hero-container">
+            <img src="511-2000x1000.jpg" alt="Hero Image" class="hero-image">
+            <div class="hero-text">
+                <h1>Semih Eryücel</h1>
+                <p>Electrical & Electronics Engineering Student at Ege University</p>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="logo"><a href="#">S</a></li>
+                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#experience">Experience</a></li> -->
+                <li><a href="#education">Education</a></li>
+                <!-- <li><a href="#projects">Projects</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+                <!-- <li class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </li> -->
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>About Me</h1>
+            <p>I am Semih Eryücel, an Electrical-Electronic Engineering student at Ege University. My academic journey in Ege University started in 2024.</p>
+        </section>
+        <!-- <section id="experience">
+            <h1>Experience</h1>
+            <ul>
+                <li>
+                    <h2>Job Title 1</h2>
+                    <p>Company Name - Duration</p>
+                    <p>Brief description of responsibilities and achievements.</p>
+                </li>
+                <li>
+                    <h2>Job Title 2</h2>
+                    <p>Company Name - Duration</p>
+                    <p>Brief description of responsibilities and achievements.</p>
+                </li>
+            </ul>
+        </section> -->
+        <section id="education">
+            <h1>Education</h1>
+            <ul>
+                <li>
+                    <h2>Ege University</h2>
+                    <p>Electrical & Electronics Engineering</p>
+                    <p>2024 - Present</p>
+                </li>
+                <li>
+                    <h2>Bilal Güngör Science High School</h2>
+                    <p>2020 - 2024</p>
+                    <p></p>
+                </li>
+            </ul>
+        </section>
+        <!-- <section id="projects">
+            <h1>Projects</h1>
+            <ul>
+                <li>
+                    <h2>Project 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                </li>
+                <li>
+                    <h2>Project 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                </li>
+            </ul>
+        </section> -->
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p> -->
+            <form action="/submit-form" method="post">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
