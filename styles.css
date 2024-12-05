@@ -6,7 +6,8 @@ html, body, div, section, nav, ul, li, a, button, input, textarea {
 
 :root {
     --primary-bg-color: #f2f2f2;
-    --transition-duration: 0.5s;
+    --primary-text-color: #333;
+    --secondary-text-color: #666;
     --navbar-bg-color: #3498db;
     --navbar-text-color: #fff;
     --hover-bg-color: #2980b9;
@@ -27,6 +28,9 @@ body {
     padding: 0;
     background-color: var(--primary-bg-color);
     transition: background-color var(--transition-duration) ease;
+    font-family: 'Roboto', Arial, sans-serif;    
+    color: var(--primary-text-color);
+    line-height: 1.6;
 }
 
 .navbar {
@@ -40,36 +44,47 @@ body {
     justify-content: space-evenly;
     align-items: center;
     background-color: #333;
+    margin-top: -0.5em;
     padding: 1em;
+    padding-top: 1.5em;
     text-align: center;
-    transition: height 0.5s ease-out;
+    transition: height 0.5s ease-out, width 0.3s ease-out, left 0.3s ease-out;
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    outline: 1px solid #fff;
+    outline-offset: -5px;
 }
 
 .navbar.smaller {
     left: 25%;
     width: 50%;
-    height: 3em;
-    padding: 0.5em;
-}
-
-.navbar.smaller .logo {
-    font-size: 18px;
+    height: 3.5em;
 }
 
 .navbar.smaller .nav-links {
     font-size: 14px;
 }
 
+.navbar.smaller .nav-links a {
+    padding: 0.325rem 0.625rem;
+}
+
+.navbar.smaller .logo {
+    font-size: 18px !important;
+    padding: 0.2rem 0.625rem !important;
+}
+
 .logo {
-    font-size: 2rem;
+    font-size: 28px;
     font-weight: bold;
     color: var(--accent-color);
+    padding: 0.3rem 0.8rem !important;
 }
+
+
 
 .nav-links {
     list-style: none;
@@ -95,9 +110,12 @@ body {
     border-radius: 5px;
 }
 
+
 .nav-links a:hover {
     background-color: var(--hover-bg-color);
     color: var(--focus-outline-color);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 .nav-links a:focus, .nav-links a:focus-visible {
@@ -176,6 +194,11 @@ section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section.in-view {
@@ -232,6 +255,7 @@ button {
 button:hover {
     background-color: var(--button-hover-bg-color);
     transform: translateY(-2px);
+    transition: transform 0.3s ease;
 }
 
 button:focus, button:focus-visible {
@@ -276,6 +300,36 @@ button:focus, button:focus-visible {
     }
 } */
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    section {
+        width: 90%;
+    }
+}
+
 .accent-text {
     color: var(--accent-color);
 }
@@ -283,9 +337,3 @@ button:focus, button:focus-visible {
 .accent-background {
     background-color: var(--accent-color-light);
 }
-
-
-
-
-
-
