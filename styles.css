@@ -9,7 +9,8 @@ html, body, div, section, nav, ul, li, a, button, input, textarea {
     --primary-text-color: #333;
     --secondary-text-color: #666;
     --navbar-bg-color: #3498db;
-    --navbar-text-color: #fff;
+    /* --navbar-bg-color: #f8f9fa; */
+    --navbar-text-color: #FFF;
     --hover-bg-color: #2980b9;
     --focus-outline-color: #f1c40f;
     --button-bg-color: #e74c3c;
@@ -43,18 +44,18 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #333;
+    /* background-color: #333; */
+    background-color: var(--navbar-bg-color);
     margin-top: -0.5em;
     padding: 1em;
     padding-top: 1.5em;
     text-align: center;
     transition: height 0.5s ease-out, width 0.3s ease-out, left 0.3s ease-out;
-    background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    outline: 1px solid #fff;
+    outline: 1px solid #FFF;
     outline-offset: -5px;
 }
 
@@ -80,7 +81,7 @@ body {
 .logo {
     font-size: 28px;
     font-weight: bold;
-    color: var(--accent-color);
+    /* color: var(--accent-color); */
     padding: 0.3rem 0.8rem !important;
 }
 
@@ -104,7 +105,7 @@ body {
     position: relative;
     display: inline-block;
     padding: 0.625rem;
-    color: #FFF;
+    color: var(--navbar-text-color);
     text-decoration: none;
     transition: color 0.3s ease, background-color 0.3s ease;
     border-radius: 5px;
@@ -263,58 +264,56 @@ button:focus, button:focus-visible {
     outline-offset: 2px;
 }
 
-/* Responsive design */
-/* 
+.burger {
+    display: none;
+    cursor: pointer;
+    /* transition: all 0.3s ease-out;   not working */
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
 @media (max-width: 768px) {
-    .nav-links {
+    
+    .navbar.smaller {
+        height: auto;
+        width: auto;
+        /* padding-top: 1em; */
+        position: fixed;
+        margin-top: 0;
+        top: 10px;
+        left: auto;
+        right: 10px;
+        padding: 5px;
+        /* background-color: var(--navbar-bg-color); */
+        border-radius: 5px;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+    }
+
+    .navbar.smaller .nav-links {
         display: none;
     }
 
-    .burger {
+    .navbar.smaller .burger {
         display: block;
         cursor: pointer;
+        transition: all 0.3s ease-out;
+        align-self: normal;
     }
 
-    .burger div {
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-        margin: 5px;
-        transition: all 0.3s ease-in-out;
+    .burger.toggle {
+        margin: auto 0;
     }
 
-    .nav-active {
-        transform: translateX(0);
-    }
-
-    .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .line2 {
-        opacity: 0;
-    }
-
-    .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-} */
-
-@media (max-width: 768px) {
-    .navbar {
+    .nav-links.nav-active {
+        display: flex !important;
         flex-direction: column;
-        height: auto;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links a {
-        padding: 10px;
-        width: 100%;
-        text-align: center;
     }
 
     .hero-text h1 {
@@ -328,6 +327,26 @@ button:focus, button:focus-visible {
     section {
         width: 90%;
     }
+
+    
+    .nav-active {
+        transform: translateX(0);
+    }
+
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+
+
 }
 
 .accent-text {
