@@ -41,6 +41,8 @@ body {
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--navbar-bg-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);  /* Safari support */
     margin-top: -0.5em;
     padding: 1em;
     padding-top: 1.5em;
@@ -58,6 +60,8 @@ body {
     left: 25%;
     width: 50%;
     height: 3.5em;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);  /* Safari support */
 }
 
 .navbar.smaller .nav-links {
@@ -179,6 +183,17 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
+.avatar {
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.7);
+    border: 1px solid #111;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -215,7 +230,6 @@ section.in-view {
 }
 
 #education h1 {
-    font-size: 2em;
     color: var(--primary-text-color);
     margin-bottom: 20px;
 }
@@ -248,6 +262,7 @@ section.in-view {
 }
 
 h1 {
+    font-size: 2em;
     font-weight: bold;
     margin-top: 0;
 }
