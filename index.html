@@ -8,21 +8,23 @@
     <meta name="google-site-verification" content="o3lyPFA9o_CdKcjQzsuW4Q_6Yw7-F1HS7jEQn90SC9s" />
     <title>Semih Eryücel</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/se.png" type="image/jpg">
 </head>
 <body>
     <header>
         <div id="home" class="hero-container">
-            <img src="images/bg.jpeg" alt="Hero Image" class="hero-image">
+            <div class="hero-overlay"></div>
+            <img src="images/bg.jpg" alt="Hero Image" class="hero-image">
             <div class="hero-text">
                 <img src="https://avatars.githubusercontent.com/u/76877013?v=4" alt="Semih Eryücel's avatar" class="avatar">
                 <h1>Semih Eryücel</h1>
-                <p>Electrical & Electronics Engineering Student at Ege University</p>
+                <p>Electrical & Electronics Engineering Student at <span class="accent-text">Ege University</span></p>
             </div>
         </div>
         <nav class="navbar" role="navigation" aria-label="Main Navigation">
             <ul class="nav-links">
-                <li><a class="logo" href="#home" aria-label="Home">S</a></li>
+                <li><a class="logo" href="#home" aria-label="Home"><img src="images/se.png" alt="Logo"></a></li>
                 <li><a href="#about" aria-label="About">About</a></li>
                 <li><a href="#education" aria-label="Education">Education</a></li>
                 <li><a href="#contact" aria-label="Contact">Contact</a></li>
@@ -36,37 +38,45 @@
     </header>
 
     <main>
-        <section id="about">
+        <div class="section-divider"></div>
+        <section id="about" class="section-card">
             <h1>About Me</h1>
-            <p>I am Semih Eryücel, an Electrical & Electronics Engineering student at Ege University. My academic journey at Ege University began in 2024. I have a strong passion for technology and innovation, and I am constantly seeking to expand my knowledge and skills in the fields of electrical and electronics engineering as well as software development. I am particularly interested in embedded systems and robotics. In my free time, I enjoy working on personal projects that challenge my problem-solving abilities. I am excited about the future and the opportunities that lie ahead in my career as an engineer.</p>
+            <div class="section-underline"></div>
+            <p>I am Semih Eryücel, an Electrical & Electronics Engineering student at Ege University. My academic journey at Ege University began in 2024. I have a strong passion for technology and innovation, and I am constantly seeking to expand my knowledge and skills in the fields of electrical and electronics engineering as well as software development. I am particularly interested in <span class="accent-text">embedded systems and robotics</span>. In my free time, I enjoy working on personal projects that challenge my problem-solving abilities. I am excited about the future and the opportunities that lie ahead in my career as an engineer.</p>
         </section>
-        <section id="education">
+        
+        <div class="section-divider"></div>
+        <section id="education" class="section-card">
             <h1>Education</h1>
-            <ul>
+            <div class="section-underline"></div>
+            <ul class="education-list">
                 <li class="education-card">
                     <img src="images/ege-university.svg" alt="Ege University Logo" class="education-logo">
                     <div class="education-info">
                         <h2>Ege University</h2>
                         <p>Electrical & Electronics Engineering</p>
-                        <p>2024 - Present</p>
+                        <p class="education-year">2024 - Present</p>
                     </div>
                 </li>
                 <li class="education-card">
                     <img src="images/nallihan-bgfl.png" alt="Bilal Güngör Science High School Logo" class="education-logo">
                     <div class="education-info">
                         <h2>Bilal Güngör Science High School</h2>
-                        <p>2020 - 2024</p>
+                        <p class="education-year">2020 - 2024</p>
                     </div>
                 </li>
             </ul>
         </section>
-        <section id="contact">
+        
+        <div class="section-divider"></div>
+        <section id="contact" class="section-card">
             <h1>Contact Me</h1>
+            <div class="section-underline"></div>
             <form method="POST" action="https://formspree.io/f/mwpkjvwd">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit">Send</button>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
