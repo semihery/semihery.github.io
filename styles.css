@@ -5,10 +5,14 @@ html, body, div, section, nav, ul, li, a, button, input, textarea {
 :root {
     --primary-bg-color: #f8f9fa;
     --deep-navy: #0a192f;
-    --rich-teal: #64ffda;
+    /* --rich-teal: hsl(48, 89%, 40%); */
+    --rich-teal: #f1c40f;
+
+    /* --rich-teal: #64ffda; */
     --coral-accent: #ff6b6b;
     --warm-yellow: #ffd166;
     --turquoise: #06d6a0;
+    /* --turquoise: #06d6a0; */
     
     --primary-text-color: #333;
     --secondary-text-color: #666;
@@ -19,7 +23,8 @@ html, body, div, section, nav, ul, li, a, button, input, textarea {
     --focus-outline-color: var(--rich-teal);
     
     --button-bg-color: var(--rich-teal);
-    --button-hover-bg-color: #4ecdc4;
+    --button-hover-bg-color: #ffd427;
+    /* --button-hover-bg-color: #4ecdc4; */
     --button-text-color: #0a192f;
     
     --section-bg-color: #ffffff;
@@ -80,7 +85,7 @@ body {
 .navbar.smaller .logo {
     height: 1.8em;
     width: 1.8em;
-    padding: 0 !important;
+    padding: 0.325rem 0.625rem !important;
 }
 
 
@@ -123,12 +128,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 !important;
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.3s ease;
     height: 2.5em;
     width: 2.5em;
+    padding: 0.25rem 1rem !important;
+    box-sizing: content-box; /* Ensure padding doesn't affect dimensions */
 }
 
 .logo img {
@@ -246,10 +252,6 @@ body {
     margin: 0;
 }
 
-.hero-text h1, .hero-text p {
-    animation: fadeInUp 1.2s ease-out;
-}
-
 .avatar {
     width: clamp(80px, 15vw, 160px);
     height: clamp(80px, 15vw, 160px);
@@ -260,48 +262,20 @@ body {
     display: block;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
     border: 3px solid rgba(255, 255, 255, 0.2);
-    animation: fadeIn 1.5s ease-out;
-    transition: width 0.5s ease, height 0.5s ease;
+    transition: width 0.5s ease, height 0.5s ease, transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .avatar:hover {
-    animation: floatAnimation 6s ease-in-out infinite;
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    border-color: var(--rich-teal);
+    cursor: pointer;
 }
 
 .hero-container.scrolled .avatar {
     width: clamp(60px, 10vw, 120px);
     height: clamp(60px, 10vw, 120px);
 }
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes floatAnimation {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
 
 main {
     display: flex;
@@ -466,7 +440,7 @@ textarea {
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--rich-teal);
-    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+    box-shadow: 0 0 0 3px rgba(255, 255, 95, 0.2);
     background-color: #fff;
 }
 
@@ -482,13 +456,13 @@ button {
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 255, 95, 0.3);
 }
 
 button:hover {
     background-color: var(--button-hover-bg-color);
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(100, 255, 218, 0.4);
+    box-shadow: 0 6px 15px rgba(193, 193, 71, 0.4);
 }
 
 button:active {
