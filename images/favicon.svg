@@ -1,14 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Semih Eryücel">
   <defs>
-    <clipPath id="profile-badge-clip">
-      <circle cx="32" cy="32" r="22" />
-    </clipPath>
+    <linearGradient id="grey-badge-grad" x1="15%" y1="8%" x2="85%" y2="92%">
+      <stop offset="0%" stop-color="#90969F" />
+      <stop offset="50%" stop-color="#616770" />
+      <stop offset="100%" stop-color="#3D4249" />
+    </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="#0E2240" />
-  <circle cx="32" cy="32" r="22" fill="#16335E" />
-  <g clip-path="url(#profile-badge-clip)">
-    <circle cx="32" cy="49.5" r="14.5" fill="#F2B705" />
-    <circle cx="32" cy="24.2" r="7.4" fill="#FFFFFF" />
-  </g>
-  <circle cx="32" cy="32" r="22" fill="none" stroke="#2B4E84" stroke-width="1.5" />
+  <rect x="2" y="2" width="60" height="60" rx="25" fill="url(#grey-badge-grad)" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1" />
+  <circle cx="32" cy="23.2" r="8.2" fill="#FFFFFF" />
+  <path d="M16 48.8 C16 39.6 22.8 34.8 32 34.8 C41.2 34.8 48 39.6 48 48.8 C48 50.6 46.8 51.9 44.8 52.8 C41 54.4 36.6 55.2 32 55.2 C27.4 55.2 23 54.4 19.2 52.8 C17.2 51.9 16 50.6 16 48.8 Z" fill="#FFFFFF" />
 </svg>
