@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Semih Eryücel">
+  <defs>
+    <clipPath id="profile-badge-clip">
+      <circle cx="32" cy="32" r="22" />
+    </clipPath>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0E2240" />
+  <circle cx="32" cy="32" r="22" fill="#16335E" />
+  <g clip-path="url(#profile-badge-clip)">
+    <circle cx="32" cy="49.5" r="14.5" fill="#F2B705" />
+    <circle cx="32" cy="24.2" r="7.4" fill="#FFFFFF" />
+  </g>
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#2B4E84" stroke-width="1.5" />
+</svg>
